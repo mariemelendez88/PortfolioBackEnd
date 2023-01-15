@@ -1,7 +1,7 @@
 package com.portfolio.backend.controller;
 
-import com.portfolio.backend.entity.Experiencias;
-import com.portfolio.backend.service.SExperiencias;
+import com.portfolio.backend.entity.Estudios;
+import com.portfolio.backend.service.SEstudios;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -16,39 +16,39 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController //anotacion del spring o controlador
 @CrossOrigin(origins = "http://localhost:4200") //con que se va a cruzar, o sea, angular
-public class CExperiencias {
+public class CEstudios {
 	
 	@Autowired
-	SExperiencias sexperiencias;
+	SEstudios sestudios;
 	
-	@GetMapping("/experiencias")
+	@GetMapping("/estudios")
 	@ResponseBody
-	public List<Experiencias> listarExperiencias(){
-		return sexperiencias.listarExperiencias();
+	public List<Estudios> listarEstudios(){
+		return sestudios.listarEstudios();
 	}
 	
-	@PostMapping("/experiencias")
+	@PostMapping("/estudios")
 	@ResponseBody
-	public String crearExperiencia(@RequestBody Experiencias experiencia){
-		sexperiencias.crearExperiencia(experiencia);
+	public String crearEstudio(@RequestBody Estudios experiencia){
+		sestudios.crearEstudio(experiencia);
 		return "La experiencia fue creada correctamente!!";
 	}
 	
-	@DeleteMapping("/experiencias/{id}")
-	public String borrarExperiencia(@PathVariable Long id){
-		sexperiencias.borrarExperiencia(id);
+	@DeleteMapping("/estudios/{id}")
+	public String borrarEstudio(@PathVariable Long id){
+		sestudios.borrarEstudio(id);
 		return "La experiencia fue eliminada correctamente!!";
 	}
 	
-	@GetMapping("/experiencias/{id}")
+	@GetMapping("/estudios/{id}")
 	@ResponseBody
-	public Experiencias buscarExperienciaPorId(@PathVariable Long id){
-		return sexperiencias.buscarExperienciaPorId(id);
+	public Estudios buscarEstudioPorId(@PathVariable Long id){
+		return sestudios.buscarEstudioPorId(id);
 	}
 	
-	@PutMapping("/experiencias/{id}")
-	public String modificarExperiencia(@RequestBody Experiencias experiencia){
-		sexperiencias.modificarExperiencia(experiencia);
+	@PutMapping("/estudios/{id}")
+	public String modificarEstudio(@RequestBody Estudios experiencia){
+		sestudios.modificarEstudio(experiencia);
 		return "La experiencia fue modificada correctamente!!";
 	}
 }
