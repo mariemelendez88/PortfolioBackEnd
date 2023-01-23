@@ -23,32 +23,32 @@ public class CEstudios {
 	
 	@GetMapping("/estudios")
 	@ResponseBody
-	public List<Estudios> listarEstudios(){
-		return sestudios.listarEstudios();
+	public List<Estudios> listarItems(){
+		return sestudios.listarItems();
 	}
 	
 	@PostMapping("/estudios")
 	@ResponseBody
-	public String crearEstudio(@RequestBody Estudios experiencia){
-		sestudios.crearEstudio(experiencia);
-		return "La experiencia fue creada correctamente!!";
+	public String crearItem(@RequestBody Estudios estudio){
+		sestudios.crearItem(estudio);
+		return "El estudio fue creado correctamente!!";
 	}
 	
 	@DeleteMapping("/estudios/{id}")
-	public String borrarEstudio(@PathVariable Long id){
-		sestudios.borrarEstudio(id);
-		return "La experiencia fue eliminada correctamente!!";
+	public String borrarExperiencia(@PathVariable Long id){
+		sestudios.borrarItem(id);
+		return "El estudio fue eliminado correctamente!!";
 	}
 	
 	@GetMapping("/estudios/{id}")
 	@ResponseBody
-	public Estudios buscarEstudioPorId(@PathVariable Long id){
-		return sestudios.buscarEstudioPorId(id);
+	public Estudios cargarItem(@PathVariable Long id){
+		return sestudios.cargarItem(id);
 	}
 	
-	@PutMapping("/estudios/{id}")
-	public String modificarEstudio(@RequestBody Estudios experiencia){
-		sestudios.modificarEstudio(experiencia);
-		return "La experiencia fue modificada correctamente!!";
+	@PutMapping("/estudios")
+	public String modificarItem(@RequestBody Estudios estudio){
+		sestudios.modificarItem(estudio);
+		return "El estudio fue modificado correctamente!!";
 	}
 }

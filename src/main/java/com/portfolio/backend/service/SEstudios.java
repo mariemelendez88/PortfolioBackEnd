@@ -9,25 +9,25 @@ import org.springframework.stereotype.Service;
 @Service
 public class SEstudios {
 	@Autowired
-	REstudios rexperiencias;
+	REstudios restudios;
 	
-	public void crearEstudio(Estudios experiencia){
-		rexperiencias.save(experiencia);
+	public List<Estudios> listarItems(){
+		return restudios.findAll();
 	}
 	
-	public void borrarEstudio(Long id){
-		rexperiencias.deleteById(id);
+	public Estudios cargarItem(Long id){
+		return restudios.findById(id).orElse(null);
 	}
 	
-	public List<Estudios> listarEstudios(){
-		return rexperiencias.findAll();
+	public void crearItem(Estudios estudio){
+		restudios.save(estudio);
 	}
 	
-	public Estudios buscarEstudioPorId(Long id){
-		return rexperiencias.findById(id).orElse(null);
+	public void borrarItem(Long id){
+		restudios.deleteById(id);
 	}
 	
-	public void modificarEstudio(Estudios experiencia){
-		rexperiencias.save(experiencia);
+	public void modificarItem(Estudios estudio){
+		restudios.save(estudio);
 	}
 }
