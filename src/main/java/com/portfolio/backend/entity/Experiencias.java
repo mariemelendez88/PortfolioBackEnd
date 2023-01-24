@@ -26,9 +26,9 @@ public class Experiencias {
 	
 	private String instit;
 	
-	private String fecha_inicio;
+	private String inicio;
 	
-	private String fecha_fin;
+	private String fin;
 	
 	@Lob
 	@Column(name = "puesto", length = 800)
@@ -41,12 +41,12 @@ public class Experiencias {
 	public Experiencias() {
 	}
 
-	public Experiencias(String logo, String link_instit, String instit, String fecha_inicio, String fecha_fin, String puesto, String descripcion) {
+	public Experiencias(String logo, String link_instit, String instit, String inicio, String fin, String puesto, String descripcion) {
 		this.logo = logo;
 		this.link_instit = link_instit;
 		this.instit = instit;
-		this.fecha_inicio = fecha_inicio;
-		this.fecha_fin = fecha_fin;
+		this.inicio = inicio;
+		this.fin = fin;
 		this.puesto = puesto;
 		this.descripcion = descripcion;
 	}
