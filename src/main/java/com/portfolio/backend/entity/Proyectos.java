@@ -21,7 +21,7 @@ public class Proyectos {
 	private String logo;
 	
 	@Lob
-	@Column(name = "link-instit", length = 800)
+	@Column(name = "link_repo", length = 800)
 	private String link_repo;
 	
 	private String fin;

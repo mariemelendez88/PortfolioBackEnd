@@ -21,7 +21,7 @@ public class Experiencias {
 	private String logo;
 	
 	@Lob
-	@Column(name = "link-instit", length = 800)
+	@Column(name = "link_instit", length = 800)
 	private String link_instit;
 	
 	private String instit;
