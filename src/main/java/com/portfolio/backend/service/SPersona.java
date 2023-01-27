@@ -11,29 +11,29 @@ public class SPersona {
 	@Autowired
 	RPersona rpersona;
 	
-	public void crearPersona(Persona persona){
-		rpersona.save(persona);
-	}
+	// public List<Persona> listarItems(){
+	// 	return rpersona.findAll();
+	// }
 	
-	public void borrarPersona(Long id){
-		rpersona.deleteById(id);
-	}
-	
-	public List<Persona> listarPersonas(){
-		return rpersona.findAll();
-	}
-	
-	public Persona buscarPersonaPorId(Long id){
+	public Persona cargarItem(Long id){
 		return rpersona.findById(id).orElse(null);
 	}
 	
-	public void modificarPersona(Persona persona){
+	// public void crearItem(Persona persona){
+	// 	rpersona.save(persona);
+	// }
+	
+	// public void borrarItem(Long id){
+	// 	rpersona.deleteById(id);
+	// }
+	
+	public void modificarItem(Persona persona){
 		rpersona.save(persona);
 	}
 	
 	public PersonaDTO login(String email, String password){
 		Persona persona = rpersona.findByEmailAndPassword(email, password);
-		PersonaDTO personaDTO = new PersonaDTO(persona.getId(),persona.getNombre(),persona.getApellido(),persona.getTitulo(),persona.getFrase(),persona.getAcercade(),persona.getImgBanner(),persona.getImgPfp(),persona.getDescripcionPfp(),persona.getCvpdf(),persona.getTextofooter());
+		PersonaDTO personaDTO = new PersonaDTO(persona.getId(),persona.getNombre(),persona.getApellido(),persona.getTitulo(),persona.getFrase(),persona.getAcercade(),persona.getImgBanner(),persona.getImgPfp(),persona.getCvpdf(),persona.getTextofooter());
 		return personaDTO;
 	}
 }

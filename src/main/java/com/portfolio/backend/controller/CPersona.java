@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,35 +21,34 @@ public class CPersona {
 	@Autowired
 	SPersona spersona;
 	
-	@GetMapping("/persona")
+	// @GetMapping("/persona")
+	// @ResponseBody
+	// public List<Persona> listarItems(){
+	// 	return spersona.listarItems();
+	// }
+	
+	// @PostMapping("/persona")
+	// @ResponseBody
+	// public String crearItem(@RequestBody Persona persona){
+	// 	spersona.crearItem(persona);
+	// 	return "La persona fue creada correctamente!!";
+	// }
+	
+	// @DeleteMapping("/persona/{id}")
+	// public String borrarExperiencia(@PathVariable Long id){
+	// 	spersona.borrarItem(id);
+	// 	return "La persona fue eliminada correctamente!!";
+	// }
+	
+	@GetMapping("/persona/{id}")
 	@ResponseBody
-	public List<Persona> listarPersonas(){
-		return spersona.listarPersonas();
+	public Persona cargarItem(@PathVariable Long id){
+		return spersona.cargarItem(id);
 	}
 	
-	//@PostMapping("/persona")
-	//@ResponseBody
-	//public String crearPersona(@RequestBody Persona persona){
-	//	spersona.crearPersona(persona);
-	//	return "La persona fue creada correctamente!!";
-	//}
-	
-	//@DeleteMapping("/persona/{id}")
-	//public String borrarPersona(@PathVariable Long id){
-	//	spersona.borrarPersona(id);
-	//	return "La persona fue eliminada correctamente!!";
-	//}
-	
-	//@GetMapping("/persona/{id}")
-	//@ResponseBody
-	//public Persona buscarPersonaPorId(@PathVariable Long id){
-	//	return spersona.buscarPersonaPorId(id);
-	//}
-	
 	@PutMapping("/persona")
-	@ResponseBody
-	public String modificarPersona(@RequestBody Persona persona){
-		spersona.modificarPersona(persona);
+	public String modificarItem(@RequestBody Persona persona){
+		spersona.modificarItem(persona);
 		return "La persona fue modificada correctamente!!";
 	}
 	
