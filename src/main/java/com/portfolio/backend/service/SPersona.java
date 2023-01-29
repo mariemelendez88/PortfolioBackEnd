@@ -33,7 +33,7 @@ public class SPersona {
 	
 	public PersonaDTO login(String email, String password){
 		Persona persona = rpersona.findByEmailAndPassword(email, password);
-		PersonaDTO personaDTO = new PersonaDTO(persona.getId(),persona.getNombre(),persona.getApellido(),persona.getTitulo(),persona.getFrase(),persona.getAcercade(),persona.getImgBanner(),persona.getImgPfp(),persona.getCvpdf(),persona.getTextofooter());
+		PersonaDTO personaDTO = new PersonaDTO(persona.getId(),persona.getNombre(),persona.getApellido(),persona.getTitulo(),persona.getFrase(),persona.getAcercade(),persona.getImg_banner(),persona.getImg_pfp(),persona.getCvpdf(),persona.getTextofooter());
 		return personaDTO;
 	}
 }

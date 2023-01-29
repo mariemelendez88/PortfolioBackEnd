@@ -37,7 +37,7 @@ public class CRedes {
 	@DeleteMapping("/redes/{id}")
 	public String borrarRede(@PathVariable Long id){
 		sredes.borrarItem(id);
-		return "La rede fue eliminada correctamente!!";
+		return "La red fue eliminada correctamente!!";
 	}
 	
 	@GetMapping("/redes/{id}")
@@ -49,6 +49,6 @@ public class CRedes {
 	@PutMapping("/redes")
 	public String modificarItem(@RequestBody Redes red){
 		sredes.modificarItem(red);
-		return "La rede fue modificada correctamente!!";
+		return "La red fue modificada correctamente!!";
 	}
 }

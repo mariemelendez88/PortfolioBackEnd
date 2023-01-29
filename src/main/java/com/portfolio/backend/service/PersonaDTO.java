@@ -18,9 +18,9 @@ public class PersonaDTO {
 	
 	private String acercade;
 	
-	private String imgBanner;
+	private String img_banner;
 	
-	private String imgPfp;
+	private String img_pfp;
 	
 	private String cvpdf;
 	
@@ -29,15 +29,15 @@ public class PersonaDTO {
 	public PersonaDTO() {
 	}
 
-	public PersonaDTO(Long id, String nombre, String apellido, String titulo, String frase, String acercade, String imgBanner, String imgPfp, String cvpdf, String textofooter) {
+	public PersonaDTO(Long id, String nombre, String apellido, String titulo, String frase, String acercade, String img_banner, String img_pfp, String cvpdf, String textofooter) {
 		this.id = id;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.titulo = titulo;
 		this.frase = frase;
 		this.acercade = acercade;
-		this.imgBanner = imgBanner;
-		this.imgPfp = imgPfp;
+		this.img_banner = img_banner;
+		this.img_pfp = img_pfp;
 		this.cvpdf = cvpdf;
 		this.textofooter = textofooter;
 	}
