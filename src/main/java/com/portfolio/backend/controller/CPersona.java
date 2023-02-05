@@ -26,7 +26,7 @@ public class CPersona {
 	// public List<Persona> listarItems(){
 	// 	return spersona.listarItems();
 	// }
-	
+	 
 	// @PostMapping("/persona")
 	// @ResponseBody
 	// public String crearItem(@RequestBody Persona persona){
