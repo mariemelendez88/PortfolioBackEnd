@@ -15,7 +15,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController //anotacion del spring o controlador
-@CrossOrigin(origins = "http://localhost:4200") //con que se va a cruzar, o sea, angular
+//@CrossOrigin(origins = "http://localhost:4200") //con que se va a cruzar, o sea, angular
+@CrossOrigin(origins = "https://portfoliofrontend-mariem.web.app")
 public class CEstudios {
 	
 	@Autowired
