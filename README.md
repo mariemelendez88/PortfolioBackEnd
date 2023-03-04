@@ -31,75 +31,32 @@ Se implementa como arquitectura distribuida. El contenido de la misma es:
 
 ### BackEnd
 
-Este repositorio desarrolla la primera parte **BackEnd**.
-Para ello se incluyen varias ramas dentro del repo, 
+Este repositorio desarrolla la segunda parte **BackEnd**.
+Para ello se incluyen varias ramas dentro del repo, que tiene las etapas necesarias para seguir la evolución del proyecto desde que se inició hasta que fue implementado.
 
+a. [Repo Master](https://github.com/mariemelendez88/PortfolioBackEnd/tree/master): incluye el desarrollo de todo el proyecto, rama que se asoció a Netbeans y se hacía la actualización usando los famosos tres comandos de github, es decir: (i)```git add .```, (ii)```git commit -m "message"``` y (iii)```git push```. Comandos que tiene el menú del proyecto y facilitó el uso evitando así tener que abrir terminales asociadas.
 
+b. [Repo Backup](https://github.com/mariemelendez88/PortfolioBackEnd/tree/backup): permitió guardar una copia del proyecto cada vez que se cargaba a github, de manera tal que si se cometía un error en el master, se tenía como volver atrás eliminando la rama master y creandola de nuevo con la info y archivos de este repo.
 
+c. Pruebas de implementación con el frontend:
 
+* [main](https://github.com/mariemelendez88/PortfolioBackEnd): Repo final implementado en la arquitectura distribuida.
 
-
-
-
-
-
-
-
-
-
-
-que tiene las etapas necesarias para seguir la evolución del proyecto desde que se inició hasta que fue implementado.
-
-a. [Repo Estático](https://github.com/mariemelendez88/PortfolioFrontEnd/tree/RepoEstatico): incluye un primer desarrollo del portfolio frontend. 
-
-b. [Repo Dinámico](https://github.com/mariemelendez88/PortfolioFrontEnd/tree/RepoDinamico): incluye el portafolio estático, pero esta vez, implementado en Angular, dividiendo en componentes. A su vez, se diseñaron varios archivos .json en los que se desplegó la información del repo estático, para que así cada componente lea la info y la cargue.
-
-c. Pruebas de implementación con el backend:
-
-* [main](https://github.com/mariemelendez88/PortfolioFrontEnd): Repo final implementado en la arquitectura distribuida.
-
-* [Develop](https://github.com/mariemelendez88/PortfolioFrontEnd/tree/develop): Rama de desarrollo, ensayo y error, para definir nuevas funcionalidades al repo dinámico.
-
-* [backupWithExperienceWorking](https://github.com/mariemelendez88/PortfolioFrontEnd/tree/backupWithExperienceWorking): incluye la conexión del componente ***experiencia*** con el backend y se prueban funcionalidades de CRUD, revisando exitosamente la modificación de la base de datos.
-
-* [backupwithExpeEstuWork](https://github.com/mariemelendez88/PortfolioFrontEnd/tree/backupwithExpeEstuWork): incluye la conexión de los componentes ***experiencia y estudios*** con el backend y se prueban funcionalidades de CRUD, revisando exitosamente la modificación de la base de datos.
-
-* [backupExpeProyEstuWorks](https://github.com/mariemelendez88/PortfolioFrontEnd/tree/backupExpeProyEstuWorks): incluye la conexión de los componentes ***experiencia, estudios y proyectos*** con el backend y se prueban funcionalidades de CRUD, revisando exitosamente la modificación de la base de datos.
-
-* [backupExpEstSkiRedProWorking](https://github.com/mariemelendez88/PortfolioFrontEnd/tree/backupExpEstSkiRedProWorking): incluye la conexión de los componentes ***experiencia, estudios, proyectos, skills y referencias*** con el backend y se prueban funcionalidades de CRUD, revisando exitosamente la modificación de la base de datos.
-
-Una vez desarrollado el frontend, se realizó el despliegue en **Firebase**, utilizando el [video 78](https://www.youtube.com/watch?v=mKqndHmy5v8&list=PL1oXSbt2OIbGud1tuMPMZrkXZSDifUcEU&index=78) y para actualizar cualquier modificación realizada luego del despliegue, se utilizan los siguientes comandos:
-
-```$ ng build```
-
-```$ firebase deploy```
+Una vez desarrollado el backend, se realizó el despliegue en **Render**, utilizando las herramientas del curso, creando así el archivo Dockerfile y revisando que se creara lo necesario, para guardar en github y deployar. Se logró al tercer intento, puesto que tenía instalado en la pc jdk17 y se realizó una actualización a jdk19, lo que permitió que sí se cargara al repo remoto la info completa de la rama, para poder deployar.
 
 
 ## Tecnologías
 
-Las tecnologías y lenguajes utilizados en el ***frontend*** se listan a continuación:
-* [Visual Studio Code](https://code.visualstudio.com/): Version 1.75
-* [HTML5](https://developer.mozilla.org/es/docs/Web/HTML)
-* [CSS3](https://developer.mozilla.org/es/docs/Web/CSS)
-* [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/): Version 5.0
-* [TypeScript](https://www.typescriptlang.org/)
-* [Angular](https://angular.io/): Version 14
-* [Firebase](https://firebase.google.com/)
-* [Imgbb](https://imgbb.com/)
+Las tecnologías y lenguajes utilizados en el ***backend*** se listan a continuación:
+* [Java](https://www.oracle.com/java/technologies/javase/jdk19-archive-downloads.html), Versión 19
+* [Netbeans](https://netbeans.apache.org/download/nb15/), Versión 15
 
 
 ## Visualización
 
-Para visualizar la página web, haga click [aquí](https://portfoliofrontend-mariem.web.app/index).
+El repo backend se puede ubicar en el siguiente [link](https://portfoliobackend-ab8p.onrender.com). 
 
-Para entrar en el segmento de dashboard, hacer click en el **login** en la parte superior derecha de la web y utilizar los siguientes datos:
-
-
-**Email**: ```mail@mail.com```
-
-**Contraseña**:  ```123456789```
-
-Una vez terminado de usar el dashboard, hacer click en el **logout** en la parte superior derecha de la web y de forma automática, se redirige al index.
+Dicho link fue sustituido en los servicios del frontend para poder hacer la conexión correspondiente.
 
 
 ## Agradecimientos
